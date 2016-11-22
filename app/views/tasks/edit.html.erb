@@ -1,0 +1,16 @@
+<h1>Tasks#edit</h1>
+
+<h2> just type in the field you want to update </h2>
+<%= form_for @task do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_field :description %><br />
+
+  <%= f.label :status %>
+  <%= f.check_box :status %>
+
+  <%= f.submit %>
+<% end %>
+<p> <%= link_to "back to your task", task_path(@task) %> </p>

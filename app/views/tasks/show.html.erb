@@ -1,0 +1,10 @@
+<h1> task: <%= @task.name %></h1>
+<h2> Description: </h2>
+<p> <%= @task.description %> </p>
+<p>status: (<%= @task.status %>) </p>
+<hr>
+<p> task created on <%= @task.created_at %> </p>
+<p> task updated on <%= @task.updated_at%> </p>
+<p> <%= link_to "back to the list of tasks", tasks_path %> </p>
+<p> <%= link_to "edit that task", edit_task_path(@task) %> </p>
+<p> <%= link_to "delete that task",  task_path(@task), method: :delete  %> </p>
